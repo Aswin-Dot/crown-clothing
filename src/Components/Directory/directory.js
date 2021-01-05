@@ -40,15 +40,14 @@ export default class Directory extends Component{
         ]
     };
 
+
     render() {
         return (
             <div className="directory-menu">
-                {this.state.sectons.map(({title, imageUrl, id, size}) => {
+                {this.state.sectons.map(({id, ...otherSectionProps}) => {
                     return <MenuItem 
                         key={id}
-                        title={title}
-                        imageUrl={imageUrl}
-                        size={size}/>
+                        {...otherSectionProps}/>
                 })}
             </div>
         )
