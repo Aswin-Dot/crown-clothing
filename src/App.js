@@ -1,6 +1,7 @@
 import './App.css';
 import HomePage from './Pages/homepage/homepage.js';
 import { Route } from 'react-router-dom';
+import ShopPage from './Pages/shop/shopPage'
 
 const HatsPage = () => (
   <div>
@@ -12,7 +13,7 @@ function App() {
   return (
     <div>
         <Route exact path='/' component={HomePage} />
-        <Route  path='/hats' component={HatsPage} />
+        <Route  path='/shop' component={ShopPage} />
     </div>
   );
 }
