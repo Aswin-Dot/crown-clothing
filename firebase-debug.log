@@ -1,0 +1,21 @@
+[debug] [2021-01-07T11:23:07.584Z] ----------------------------------------------------------------------
+[debug] [2021-01-07T11:23:07.588Z] Command:       /home/aswinraj/.nvm/versions/node/v14.15.0/bin/node /home/aswinraj/.nvm/versions/node/v14.15.0/bin/firebase init
+[debug] [2021-01-07T11:23:07.589Z] CLI Version:   9.1.1
+[debug] [2021-01-07T11:23:07.589Z] Platform:      linux
+[debug] [2021-01-07T11:23:07.589Z] Node Version:  v14.15.0
+[debug] [2021-01-07T11:23:07.590Z] Time:          Thu Jan 07 2021 16:53:07 GMT+0530 (India Standard Time)
+[debug] [2021-01-07T11:23:07.590Z] ----------------------------------------------------------------------
+[debug] [2021-01-07T11:23:07.590Z] 
+[debug] [2021-01-07T11:23:07.637Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-07T11:23:07.638Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/aswinraj/Documents/Web Development Work Folder/React/crown-clothing
+
