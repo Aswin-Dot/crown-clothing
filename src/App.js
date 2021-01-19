@@ -9,7 +9,8 @@ import ShopPage from './Pages/shop/shopPage';
 import Header from './Components/Header/header';
 import SignInAndSignUpPage from './Pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page';
 import HomePage from './Pages/homepage/homepage.js';
-import CheckoutPage from "./Pages/checkout/checkout"
+import CheckoutPage from "./Pages/checkout/checkout";
+import Backdrop from './Components/Backdrop/backdrop';
 import './App.css';
 
 class App extends Component {
@@ -63,6 +64,7 @@ class App extends Component {
               )
             }/>
         </Switch>
+        <Backdrop/>
       </div>
     );
   }
