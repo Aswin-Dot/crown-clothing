@@ -6,7 +6,7 @@ const StripeCheckoutButton = ({ price }) => {
     const priceForSale = price * 100;
     const publishableKey = "pk_test_51ICU0EDZuaatzxYEVq0BsYjp40H0xIJLSmfe1yIXKDIYYdVHImQIdSWlFI4zupUfITTMWfsvoWSb34JyLy9x9Eu300Qd0G7BTo";
 
-    const onToken = token =>{
+    const onToken = token => {
         console.log(token);
         alert('payement successful')
     }
@@ -23,7 +23,7 @@ const StripeCheckoutButton = ({ price }) => {
             panelLabel='Pay Now'
             token={onToken}
             stripeKey={publishableKey}
-            />
+        />
     )
 }
 
