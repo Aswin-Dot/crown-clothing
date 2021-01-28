@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { auth, createUserProfileDocument } from './Firebase/firebase.utils'
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+
+import { auth, createUserProfileDocument} from './Firebase/firebase.utils'
 import { setCurrentUser } from './Redux/user/user-action';
 import { selectCurrentUser } from './Redux/user/user-selectors';
+
 import ShopPage from './Pages/shop/shopPage';
 import Header from './Components/Header/header';
 import SignInAndSignUpPage from './Pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page';
@@ -33,11 +35,14 @@ class App extends Component {
               ...snapshot.data()
             }
           });
-          // console.log(this.state);
         })
       } else {
         setCurrentUser(userAuth)
       }
+
+      // addCollectionAndDocument(
+      //   'collections', 
+      //   collectionsArray.map(({ title, items }) => ({ title, items })))
     })
   }
 
