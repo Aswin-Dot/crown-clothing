@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -14,46 +14,39 @@ import CheckoutPage from "./Pages/checkout/checkout";
 import Backdrop from './Components/Backdrop/backdrop';
 import './App.css';
 
-class App extends Component {
+const App = ({ checkUserSession, currentUser }) => {
 
-  unSubscribeFromAuth = null
+  // const unSubscribeFromAuth = null
 
-  componentDidMount()  {
-    const { checkUserSession } = this.props
+  useEffect(() => {
     checkUserSession();
 
     //   // addCollectionAndDocument(
     //   //   'collections', 
     //   //   collectionsArray.map(({ title, items }) => ({ title, items })))
-  }
+  }, [checkUserSession])
 
-  componentWillUnmount() {
-    this.unSubscribeFromAuth();
-  }
-
-  render(){
-    return (
-      <div>
-        <Header/>
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route  path='/shop' component={ShopPage} />
-          <Route exact path='/checkout' component={CheckoutPage}/>
-          <Route 
-            exact  
-            path='/signin' 
-            render={() => 
-              this.props.currentUser ? (
-                <Redirect to="/" />
-              ) : (
-                <SignInAndSignUpPage/>
-              )
-            }/>
-        </Switch>
-        <Backdrop/>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Header/>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route  path='/shop' component={ShopPage} />
+        <Route exact path='/checkout' component={CheckoutPage}/>
+        <Route 
+          exact  
+          path='/signin' 
+          render={() => 
+            currentUser ? (
+              <Redirect to="/" />
+            ) : (
+              <SignInAndSignUpPage/>
+            )
+          }/>
+      </Switch>
+      <Backdrop/>
+    </div>
+  );
 }
 
 const mapStateToProps = createStructuredSelector({
