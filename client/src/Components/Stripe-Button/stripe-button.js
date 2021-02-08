@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from '../../../../../http--01-starting-setup/public/node_modules/axios';
-import StripeCheckout from '../../../../../http--01-starting-setup/public/node_modules/react-stripe-checkout';
+import axios from 'axios';
+import StripeCheckout from 'react-stripe-checkout';
 
 const StripeCheckoutButton = ({ price }) => {
     const priceForSale = price * 100;
