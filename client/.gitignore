@@ -1,8 +1,6 @@
 node_modules
 
 # production
+.eslintcache
 build
-
-/.eslintcache
-
-/README.md
+README.md
