@@ -1,10 +1,14 @@
 .collection-item {
-  width: 22vw;
+  width: 23.5%;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
   position: relative;
+
+  @media screen and(max-width: 800px) {
+    width: 23.5vh;
+  }
 
   .image {
     width: 100%;
@@ -32,6 +36,16 @@
       display: flex;
     }
   }
+
+    @media screen and(max-width: 800px) {
+      .image {
+        opacity: unset;
+      }
+
+      .custom-button {
+        opacity: unset;
+      }
+    }
 
   .collection-footer {
     width: 100%;
